@@ -9,9 +9,6 @@ Test ints greater than 0 (shouldn't raise error or return anything):
      >>> bg = BaseGeometry()
      >>> bg.integer_validator("checkme", 999)
 
-     >>> bg = BaseGeometry()
-     >>> bg.integer_validator("age", True)
-
 FAIL CASES:
 
 Test non-implemented area method
@@ -71,6 +68,12 @@ Test non-ints:
      Traceback (most recent call last):
      ...
      TypeError: checkme must be an integer
+
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("age", True)
+     Traceback (most recent call last):
+     ...
+     TypeError: age must be an integer
 
      >>> bg = BaseGeometry()
      >>> bg.integer_validator("checkme", {3, 4})
