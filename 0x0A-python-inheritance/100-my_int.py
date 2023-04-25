@@ -1,26 +1,15 @@
 #!/usr/bin/python3
-"""
-This module contains a class
-MyInt that inherits from the native
-class of int.
-"""
+
+"""Defines a class MyInt that inherits from int."""
 
 
 class MyInt(int):
-    """
-    This class inherits from the native class
-    of 'int'. It has every other method of the
-    native 'int' class except that it inverts the
-    '__eq__' and '__ne__' methods or operators.
-    """
+    """Invert int operators == and !=."""
 
+    def __eq__(self, value):
+        """Override == opeartor with != behavior."""
+        return self.real != value
 
-    def __eq__(self, other):
-        """ It checks for inverted equality with a compared number """
-        self.other = other
-        return self.numerator != self.other
-
-    def __ne__(self, other):
-        """ It checks for inverted non-equality with a compared number """
-        self.other = other
-        return self.numerator == self.other
+    def __ne__(self, value):
+        """Override != operator with == behavior."""
+        return self.real == value
