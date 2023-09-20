@@ -1,4 +1,5 @@
-0x12. JavaScript - Warm up JavaScript
+# 0x12. JavaScript - Warm up JavaScript
+
  	Questions
 Tasks
 0. First constant, first print

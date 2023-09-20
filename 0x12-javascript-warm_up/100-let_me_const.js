@@ -1,3 +1,2 @@
 #!/usr/bin/node
-
-exports.default = (() => { myVar = 333; })();
+myVar = 333;
